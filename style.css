@@ -53,3 +53,34 @@ html{
     margin: 24px auto;
     display: block;
 }
+.popup{
+    background: linear-gradient(135deg,#8052ec, #d261ff);
+height: 100%;
+width: 100%;
+position: absolute;
+display: flex;
+z-index: 2;
+align-items: center;
+justify-content:center ;
+flex-direction: column;
+gap: 50px;
+font-size: 12vmin;
+
+}
+#new-game{
+font-size: 0.6em;
+padding: 0.5em 1em;
+background-color: black;
+color: white;
+border-radius: 9px;
+border: none;
+box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+#msg{
+color: #ffffff;
+text-align: center;
+font-size: 1em;
+}
+.popup.hide{
+display: none;
+}
