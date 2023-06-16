@@ -83,3 +83,7 @@ font-size: 1em;
 .popup.hide{
 display: none;
 }
+#player{
+  text-align  : center;
+  font-size: 35px;
+}
