@@ -47,6 +47,17 @@ restartbtn.addEventListener("click", () => {
 //when a player win this function is executed
 const winFunction = (letter) => {
     disableButtons();
+    if(letter == "X"){
+        msg.innerHTML = "&#x1F389; <br>'X' Wins"
+    }
+    else{
+        msg.innerHTML = "&#x1F389; <br>'O' Wins"
+    }
+    }
+    // If the result is Draw 
+    const drawFunction = () => {
+        disableButtons();
+        msg.innerHTML = "&#x1F60E; <br> It's a Draw"
     }
 
  
@@ -83,8 +94,7 @@ btnoption.forEach((element) => {
         //increment count(To determine if it is a Draw)
         count += 1; 
         if(count == 9){
-
-
+            drawFunction();
         }
         //check for win on each and every click 
         winChecker();
