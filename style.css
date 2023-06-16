@@ -24,11 +24,10 @@ html{
 
 }
 .container{
-    width: 70vmin;
-    height: 70vmin;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2vmin;
+   display: grid;
+    grid-template-columns: auto  auto auto;
+    gap: 20px;
+    padding: 25px;
 }
 .btnoption{
     background: #ffffff;
