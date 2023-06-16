@@ -23,6 +23,26 @@ const disableButtons = () =>{
     btnoption.forEach((element) => (element.disabled = true));
     popup.classList.remove("hide");
 }
+//when new game/restart btn clicked enable all buttons
+const enableButtons = () => {
+    btnoption.forEach((element) =>{
+    element.innerText= "";
+    element.disabled = false;
+})
+    popup.classList.add("hide");
+}
+
+//New Game 
+newgamebtn.addEventListener("click", () => {
+    count = 0;
+    enableButtons();
+})
+
+//Restart Game 
+restartbtn.addEventListener("click", () => {
+    count = 0;
+    enableButtons();
+})
  
 //when a player win this function is executed
 const winFunction = (letter) => {
