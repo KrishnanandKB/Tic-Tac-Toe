@@ -31,11 +31,11 @@ html{
 }
 .btnoption{
     background: #ffffff;
-    height: 22vmin;
-    width: 22vmin;
+    height: 15vmin;
+    width: 15vmin;
     border: none;
     border-radius: 9px;
-    font-size:16vmin;
+    font-size:12vmin;
     color: #d161ff;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
@@ -44,10 +44,10 @@ html{
     margin-top: 24px;
     padding: 16px;
     border-radius:9px ;
-    background-color: black;
-    color: rgb(255, 255, 255);
+    background-color: rgba(30,198,14,0.952);
+    color: rgb(0, 0, 0);
     border: none;
-    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
     position: relative;
     margin: 24px auto;
     display: block;
@@ -56,6 +56,7 @@ html{
     background: linear-gradient(135deg,#8052ec, #d261ff);
 height: 100%;
 width: 100%;
+top: 10%;
 position: absolute;
 display: flex;
 z-index: 2;
@@ -67,13 +68,15 @@ font-size: 12vmin;
 
 }
 #new-game{
-font-size: 0.6em;
+font-size: 0.4em;
 padding: 0.5em 1em;
-background-color: black;
-color: white;
+background-color: rgba(30, 198, 14, 0.952);
+color: rgb(0, 0, 0);
 border-radius: 9px;
 border: none;
-box-shadow: 0 0 15px rgba(0,0,0,0.5);
+box-shadow: 0 0 15px rgba(0,0,0,1);
+height: 12vmin;
+width: 35vmin;
 }
 #msg{
 color: #ffffff;
@@ -86,4 +89,8 @@ display: none;
 #player{
   text-align  : center;
   font-size: 35px;
+}
+#currentPlayer{
+    font-size: 22px;
+    text-align: center;
 }
