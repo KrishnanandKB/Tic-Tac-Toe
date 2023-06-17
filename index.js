@@ -3,6 +3,9 @@ let popup = document.querySelector(".popup");
 let newgamebtn = document.getElementById("new-game");
 let restartbtn = document.getElementById("restart");
 let msg = document.getElementById("msg");
+let currentPlayer = document.getElementById("currentPlayer");
+const canvas = document.getElementById("confetti");
+const jsConfetti = new JSConfetti()
 
 //Winning Pattern Array
 let winningpattern = [
@@ -18,10 +21,12 @@ let winningpattern = [
 // Player X turn
 let xTurn = true;
 let count = 0;
+currentPlayer.innerHTML = `Current Player ${"' X '"}`
 
 const disableButtons = () =>{
     btnoption.forEach((element) => (element.disabled = true));
     popup.classList.remove("hide");
+    jsConfetti.addConfetti();
 }
 //when new game/restart btn clicked enable all buttons
 const enableButtons = () => {
@@ -83,11 +88,13 @@ btnoption.forEach((element) => {
     element.addEventListener("click",()=> {
         if(xTurn) {
             xTurn = false;
+            currentPlayer.innerHTML = `Current Player ${"' O '"}`
             element.innerText = "X";
             element.disabled = true;
         }
         else {
             xTurn = true;
+            currentPlayer.innerHTML = `Current Player ${"' X '"}`
             element.innerText = "O";
             element.disabled = true;
         }
